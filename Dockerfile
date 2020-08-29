@@ -1,6 +1,6 @@
 # Consulter éventuellement https://wiki.alpinelinux.org/wiki/Nginx
 
-FROM alpine:3.9
+FROM alpine:3.12
 
 LABEL maintainer="Yannick Cadin <yannick@diablotin.fr>"
 
