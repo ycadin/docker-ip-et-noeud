@@ -14,8 +14,8 @@ docker swarm init
 ~~~
 Lancer 
 ~~~
-docker service create --name ipetnoeud -p 80:80 -e $(docker info -f '{{.Swarm.NodeID}}') --replicas=10 diablotin/ip-et-noeud
+docker service create --name ipetnoeud -p 80:80 -e ID_NOEUD='{{.Node.ID}} alias {{.Node.Hostname}}' --replicas=5 diablotin/ip-et-noeud
 ~~~
 ## Variable d'environnement
 
--   `ID_NOEUD`: chaîne de caractères quelconque `sqlite3`  or  `mysql`  (valeur par défaut :  `identite du noeud`)
+-   `ID_NOEUD`: chaîne de caractères quelconque (valeur par défaut : `identite du noeud`)
